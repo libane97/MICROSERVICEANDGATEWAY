@@ -1,0 +1,41 @@
+{
+  "name": "Checkup",
+  "fields": [
+    {
+      "fieldName": "libelle",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dateCheck",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "checkpoints",
+      "otherEntityRelationshipName": "checkup",
+      "relationshipName": "checkpoints"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "voiture",
+      "otherEntityRelationshipName": "checkup",
+      "relationshipName": "voiture",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210326232329",
+  "entityTableName": "checkup",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["djibGate", "djibGates"]
+}

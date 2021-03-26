@@ -1,0 +1,35 @@
+{
+  "name": "Checkpoints",
+  "fields": [
+    {
+      "fieldName": "libelle",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "note",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "checkup",
+      "otherEntityRelationshipName": "checkpoints",
+      "relationshipName": "checkup",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210326232429",
+  "entityTableName": "checkpoints",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["djibGate", "djibGates"]
+}
